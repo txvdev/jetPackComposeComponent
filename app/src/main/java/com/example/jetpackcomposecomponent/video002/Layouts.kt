@@ -1,8 +1,11 @@
 package com.example.jetpackcomposecomponent.video002
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
@@ -16,6 +19,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposecomponent.ui.theme.JetPackComposeComponentTheme
 
+/*
+* Carpeta 02-Layouts
+* Video 001 Box
+* */
 @Composable
 fun MyBox() {
     Box(
@@ -100,6 +107,129 @@ fun MyBoxCenter() {
     }
 }
 
+/*
+* Carpeta 02-Layouts
+* Video 001 Column
+* */
+
+@Composable
+fun MyColumn() {
+    Column(Modifier.fillMaxSize()) {
+        Text(
+            text = "Ejemplo1", modifier = Modifier
+                .background(Color.Red)
+                .weight(2f)
+        )
+        Text(
+            text = "Ejemplo2", modifier = Modifier
+                .background(Color.Cyan)
+                .weight(1f)
+        )
+        Text(
+            text = "Ejemplo3", modifier = Modifier
+                .background(Color.Blue)
+                .weight(1f)
+        )
+        Text(
+            text = "Ejemplo4", modifier = Modifier
+                .background(Color.Green)
+                .weight(2f)
+        )
+    }
+}
+
+@Composable
+fun MyColumn2() {
+    Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceAround) {
+        Text(
+            text = "Ejemplo1", modifier = Modifier
+                .background(Color.Red)
+        )
+        Text(
+            text = "Ejemplo2", modifier = Modifier
+                .background(Color.Cyan)
+        )
+        Text(
+            text = "Ejemplo3", modifier = Modifier
+                .background(Color.Blue)
+        )
+        Text(
+            text = "Ejemplo4", modifier = Modifier
+                .background(Color.Green)
+        )
+    }
+}
+
+@Composable
+fun MyColumn3() {
+    Column(
+        Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.SpaceBetween
+    ) {
+        Text(
+            text = "Ejemplo1", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo2", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo3", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo4", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo5", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo6", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo7", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo8", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo9", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+        Text(
+            text = "Ejemplo10", modifier = Modifier
+                .background(Color.Red)
+                .fillMaxWidth()
+                .height(100.dp)
+        )
+    }
+}
+
 //Previus
 @Preview(
     showBackground = true,
@@ -108,7 +238,7 @@ fun MyBoxCenter() {
 @Composable
 fun GreetingPreview() {
     JetPackComposeComponentTheme {
-        MyBox()
+        MyColumn3()
     }
 }
 
