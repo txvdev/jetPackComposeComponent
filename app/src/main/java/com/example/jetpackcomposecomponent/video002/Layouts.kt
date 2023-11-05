@@ -1,9 +1,11 @@
 package com.example.jetpackcomposecomponent.video002
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -109,7 +111,7 @@ fun MyBoxCenter() {
 
 /*
 * Carpeta 02-Layouts
-* Video 001 Column
+* Video 002 Column
 * */
 
 @Composable
@@ -230,6 +232,45 @@ fun MyColumn3() {
     }
 }
 
+/*
+* Carpeta 02-Layouts
+* Video 003 Row
+* */
+
+@Composable
+fun MyRow() {
+    Row(Modifier.fillMaxSize(), horizontalArrangement = Arrangement.SpaceBetween) {
+        Text(text = "Ejemplo1")
+        Text(text = "Ejemplo2")
+        Text(text = "Ejemplo3")
+    }
+}
+
+@Composable
+fun MyRow2() {
+    Row(Modifier.fillMaxSize()) {
+        Text(text = "Ejemplo1", modifier = Modifier.weight(1f))
+        Text(text = "Ejemplo2", modifier = Modifier.weight(1f))
+        Text(text = "Ejemplo3", modifier = Modifier.weight(1f))
+    }
+}
+
+@Composable
+fun MyRow3() {
+    Row(
+        Modifier
+            .fillMaxSize()
+            .horizontalScroll(rememberScrollState())
+    ) {
+        Text(text = "Ejemplo1", modifier = Modifier.width(100.dp))
+        Text(text = "Ejemplo2", modifier = Modifier.width(100.dp))
+        Text(text = "Ejemplo3", modifier = Modifier.width(100.dp))
+        Text(text = "Ejemplo4", modifier = Modifier.width(100.dp))
+        Text(text = "Ejemplo5", modifier = Modifier.width(100.dp))
+        Text(text = "Ejemplo6", modifier = Modifier.width(100.dp))
+    }
+}
+
 //Previus
 @Preview(
     showBackground = true,
@@ -238,7 +279,7 @@ fun MyColumn3() {
 @Composable
 fun GreetingPreview() {
     JetPackComposeComponentTheme {
-        MyColumn3()
+        MyRow3()
     }
 }
 
