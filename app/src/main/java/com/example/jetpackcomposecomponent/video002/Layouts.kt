@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -271,15 +272,62 @@ fun MyRow3() {
     }
 }
 
+/*
+* Carpeta 02-Layouts
+* Video 004 Combinando Layouts
+* */
+@Composable
+fun MyComplexLayout() {
+    Column(Modifier.fillMaxSize()) {
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .background(Color.Cyan)
+        ) {
+
+        }
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .weight(1f)
+        ) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxHeight()
+                    .background(Color.Red)
+            )
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxHeight()
+                    .background(Color.Green), contentAlignment = Alignment.Center
+            ) {
+                Text(text = "Hola tengo un texto")
+            }
+
+        }
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .weight(1f)
+                .background(Color.Magenta)
+        ) {
+
+        }
+    }
+}
+
 //Previus
 @Preview(
     showBackground = true,
-    name = "Box"
+    name = "ComplexLayout"
 )
 @Composable
 fun GreetingPreview() {
     JetPackComposeComponentTheme {
-        MyRow3()
+        MyComplexLayout()
     }
 }
 
