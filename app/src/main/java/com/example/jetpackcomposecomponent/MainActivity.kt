@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetpackcomposecomponent.ui.theme.JetPackComposeComponentTheme
-import com.example.jetpackcomposecomponent.video003.MyStateExample
+import com.example.jetpackcomposecomponent.video006.MyButtonExample
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    MyStateExample()
+                    MyButtonExample()
                 }
             }
         }
