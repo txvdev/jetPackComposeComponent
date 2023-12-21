@@ -14,6 +14,7 @@ import com.example.jetpackcomposecomponent.ui.theme.JetPackComposeComponentTheme
 import com.example.jetpackcomposecomponent.video006.MyButtonExample
 import com.example.jetpackcomposecomponent.video008.MyProgress
 import com.example.jetpackcomposecomponent.video008.MyProgressAdvance
+import com.example.jetpackcomposecomponent.video009.MiPrueba
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    MyProgressAdvance()
+                    MiPrueba()
                 }
             }
         }
